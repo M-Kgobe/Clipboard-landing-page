@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    max-width: 100%;
+}
+.logo{
+    display: flex;
+    background-image: url('images/bg-header-desktop.png');
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+}
+.logo img{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+h1,h2,h3,h4{
+    color: hsl(210, 10%, 33%);
+}
+p{
+    color: hsl(201, 11%, 66%);
+}
+li{
+    list-style-type:none;
+}
+/*Header section*/
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: auto;
+    gap: 1em;
+    max-width: 60%;
+}
+.button{
+    display: inline-flex;
+    gap: 1em;
+}
+button{
+    color: white;
+    border-radius: 50px;
+    border: none;
+    padding: 1em;
+    width: 13em;
+}
+button:hover {
+    cursor: pointer;
+    background-color:burlywood;
+}
+.iOS{
+    background-color: hsl(171, 66%, 44%);
+}
+.Mac{
+    background-color: hsl(233, 100%, 69%);
+}
+/*End of header section*/
+/*info section*/
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    gap: 1em;
+}
+.info p{
+    width: 60%;
+    text-align: center;
+}
+.snippets{
+    margin-top: 5em;
+}
+.computer{
+    display: flex;
+    width: 100%;
+    margin-top: 5em;
+}
+.computer img{
+    width: 60%;
+    transform: translate(-15%,0);
+}
+.comp-info{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-left: 5em;
+    gap: 1em;
+}
+.comp-info li{
+    line-height: 1.5em;
+}
+.comp-info p{
+    text-align: left;
+}
+.access{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+img{
+    width: 70%;
+}
+.tools{
+    width: 90%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.workflow-tools{
+    display: flex;
+    margin: auto;
+}
+.workflow-tools img{
+    width: fit-content;
+}
+.workflow-tools li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.8em;
+    gap: 1.5em;
+}
+.workflow-tools p{
+    width: 80%;
+}
+.logos{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0 5em;
+}
+.logos img{
+    width: 100px;
+    height: 30px;
+}
+.ending{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    width: 60%;
+    margin-bottom: 5em;
+}
+.ending p{
+    text-align: center;
+    width: 90%;
+}
+/*end of info ection*/
+/*about section*/
+.about{
+    display: inline-flex;
+    background-color: hsl(195, 12%, 94%);
+    padding: 1em;
+    width: 100%;
+}
+.logo-about img{
+    margin-left: 5em;
+    max-width: 25%;
+}
+.policy{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: hsl(201, 11%, 66%);
+}
+.contact{
+    display: inline-flex;
+    gap: 1em;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+}
+/*---------*/
+.attribution{
+    font-size: 11px;
+    text-align: center;
+    background-color: hsl(195, 12%, 94%);
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width:700px) {
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .computer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        gap: 2em;
+    }
+    .computer img{
+        transform: translate(0,0);
+    }
+    .comp-info{
+        text-align: center;
+        padding-left: 0;
+        margin: auto;
+    }
+    .comp-info p{
+        text-align: center;
+        margin: auto;
+    }
+    .workflow-tools{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .logos{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        align-items: center;
+        margin: auto;
+    }
+    .clipboard{
+        margin-top: 3em;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 3em;
+    }
+    .logo-about img{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .policy{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 3em auto;
+    }
+}
