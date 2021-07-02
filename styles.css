@@ -26,8 +26,9 @@ body{
     margin: auto;
 }
 .logo img{
-    display: flex;
+    display: block;
     width: fit-content;
+    max-width: 100%;
     margin: auto;
 }
 h1,h2,h3,h4{
@@ -39,7 +40,7 @@ p{
 li{
     list-style-type:none;
 }
-/*Header section*/
+/*Header section and buttons*/
 .header{
     display: flex;
     flex-direction: column;
@@ -47,40 +48,55 @@ li{
     margin: auto;
     gap: 1em;
     max-width: 60%;
+    text-align: center;
+}
+.header p{
+    max-width: fit-content;
 }
 .button{
     display: inline-flex;
+    margin-top: 2em;
     gap: 2em;
-    
 }
 button{
     color: white;
     font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
     border-radius: 50px;
     border: none;
     padding: 1em;
     width: 13em;
-    position: relative;
-    top: 0;
-    transition: top ease-in-out 0.5s;
-}
-.iOS{
-    box-shadow: 0 10px 20px hsl(171, 65%, 34%) ;
-    border-bottom: 5px solid hsl(171, 65%, 34%);
-}
-.Mac{
-    box-shadow: 0 10px 20px hsl(233, 100%, 69%);
-    border-bottom: 5px solid hsl(233, 48%, 52%);
-}
-button:hover {
-    cursor: pointer;
-    top:-10px;
+    transition: ease-in-out 1s transform;
+    outline: none;
 }
 .iOS{
     background-color: hsl(171, 66%, 44%);
+    box-shadow:0 4px 0 hsl(171, 70%, 37%),
+     0 8px 10px hsla(171, 71%, 49%, 0.4);
+}
+.iOS:hover{
+    cursor:pointer;
+    background-color: hsl(171, 66%, 49%);
+}
+.iOS:active{
+    box-shadow: 0 10px 20px hsl(171, 66%, 49%);
+    border-bottom: 5px solid rgba(23, 90, 80, 0.2);
+    transform: translateY(-1em) translateX(1em);
 }
 .Mac{
     background-color: hsl(233, 100%, 69%);
+    box-shadow:0 4px 0 hsl(233, 93%, 62%),
+    0 8px 10px hsla(233, 100%, 75%, 0.4);
+}
+.Mac:hover{
+    cursor: pointer;
+    background-color:  hsl(233, 100%, 75%);
+}
+.Mac:active{
+    box-shadow: 0 10px 20px hsl(233, 100%, 69%);
+    border-bottom: 5px solid hsl(233, 48%, 52%);
+    transform: translateY(1em) translateX(-1em);
 }
 /*End of header section*/
 /*info section*/
@@ -212,7 +228,10 @@ img{
 }
 .contact img:hover{
     cursor: pointer;
-    fill: hsl(171, 66%, 44%);
+    color: hsl(171, 66%, 44%);
+}
+.contact-links{
+    fill: currentColor;
 }
 /*---------*/
 .attribution{
@@ -223,6 +242,7 @@ img{
 .attribution a{
     color: hsl(228, 45%, 44%);
 }
+
 @media screen and (max-width:700px) {
     body{
         width: 100%;
@@ -287,4 +307,70 @@ img{
         flex-direction: column;
         margin: 3em auto;
     }
+}
+
+/*Please Note: Do not mind what happens from here onwards, I am just simply playing around*/
+
+.logo img{
+    position: relative;
+    animation: logo;
+    animation-duration:2s ;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes logo {
+    from{
+        left: 50%;
+        opacity: 0;        
+    }
+    to{
+        left: 0%;
+        opacity: 1;
+    }
+}
+.header .iOS{
+    position: relative;
+    animation: button-iOS;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:forwards;
+}
+.header .Mac{
+    position: relative;
+    animation: button-Mac;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode:forwards;
+
+}
+@keyframes button-Mac {
+    from{
+        left: 50%;
+        opacity: 0;
+    }
+    to{
+        left: 0%;
+    }
+}
+@keyframes button-iOS {
+    from{
+        right: 50%;
+        opacity: 0;
+    }
+    to{
+        right: 0%;
+    }
+}
+.computer img{
+    position: relative;
+    animation: computer 5s ease-in 0s forwards;
+}
+@keyframes computer {
+    from{
+        right: 50%;
+        opacity: 0;
+    }
+    to{
+        right: 0%;
+    }   
 }
