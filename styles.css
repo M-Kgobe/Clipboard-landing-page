@@ -50,18 +50,31 @@ li{
 }
 .button{
     display: inline-flex;
-    gap: 1em;
+    gap: 2em;
+    
 }
 button{
     color: white;
+    font-weight: 600;
     border-radius: 50px;
     border: none;
     padding: 1em;
     width: 13em;
+    position: relative;
+    top: 0;
+    transition: top ease-in-out 0.5s;
+}
+.iOS{
+    box-shadow: 0 10px 20px hsl(171, 65%, 34%) ;
+    border-bottom: 5px solid hsl(171, 65%, 34%);
+}
+.Mac{
+    box-shadow: 0 10px 20px hsl(233, 100%, 69%);
+    border-bottom: 5px solid hsl(233, 48%, 52%);
 }
 button:hover {
     cursor: pointer;
-    background-color:burlywood;
+    top:-10px;
 }
 .iOS{
     background-color: hsl(171, 66%, 44%);
@@ -171,10 +184,11 @@ img{
     background-color: hsl(195, 12%, 94%);
     padding: 1em;
     width: 100%;
+    margin: auto;
 }
 .logo-about img{
     margin-left: 5em;
-    max-width: 25%;
+    max-width: 15%;
 }
 .policy{
     display: grid;
@@ -185,12 +199,20 @@ img{
     margin: auto;
     color: hsl(201, 11%, 66%);
 }
+.policy li:hover{
+    cursor: pointer;
+    color: hsl(171, 66%, 44%);
+}
 .contact{
     display: inline-flex;
     gap: 1em;
     justify-content: flex-end;
     align-items: center;
     margin: auto;
+}
+.contact img:hover{
+    cursor: pointer;
+    fill: hsl(171, 66%, 44%);
 }
 /*---------*/
 .attribution{
@@ -251,18 +273,18 @@ img{
         display: flex;
         flex-direction: column;
         margin: auto;
+        width: 100%;
         padding: 3em;
     }
     .logo-about img{
-        display: flex;
+        display: grid;
         justify-content: center;
+        align-items: center;
         margin: auto;
     }
     .policy{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 3em auto;
     }
 }
